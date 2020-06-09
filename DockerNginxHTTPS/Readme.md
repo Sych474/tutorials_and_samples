@@ -68,7 +68,7 @@ For enabling HTTPS in Nginx we need to add these lines to config:
     ssl_certificate_key /etc/ssl/private/app.key;
 ```
 
-I take default nginx config and update it, result you can see TODO 
+I take default nginx config and update it. This is my result [config](https://github.com/Sych474/tutorials_and_samples/blob/master/DockerNginxHTTPS/default.conf).
 
 ## 3. Build docker 
 
@@ -82,7 +82,7 @@ I use nginx:1.17.1-alpine image as base, and all we need is to copy:
 
 And finaly - restart nginx in docker after config update. 
 
-Full Dockerfile is here TODO 
+This is full [Dockerfile](https://github.com/Sych474/tutorials_and_samples/blob/master/DockerNginxHTTPS/Dockerfile).
 
 to build docker use command:
 ```
@@ -93,7 +93,7 @@ docker build -t nginx-ssl .
 
 Now, when we have a docker image - let's run it. We need to assign 443 ports of docker container and host.
 
-You can use `docker-compose.yml` file from this repository by command:
+You can use [docker-compose.yml](https://github.com/Sych474/tutorials_and_samples/blob/master/DockerNginxHTTPS/docker-compose.yml) file from this repository by command:
 
 ```
 docker-compose up -d
