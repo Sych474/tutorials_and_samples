@@ -1,0 +1,80 @@
+#General configuration
+
+d-i auto-install/enable boolean true
+
+d-i debconf/priority string critical
+
+d-i pkgsel/update-policy select none
+
+#Localization
+
+d-i debian-installer/locale string en_US
+
+d-i debian-installer/language string en
+
+d-i debian-installer/country string US
+
+d-i console-setup/ask_detect boolean false
+
+#hostname
+
+d-i netcfg/get_hostname string srv-bionic
+
+#HW clock
+
+d-i clock-setup/utc boolean true
+
+#time zone
+
+d-i time/zone string US/Eastern
+
+#Use an HTTP proxy
+
+d-i mirror/country string manual
+d-i mirror/http/hostname string us.archive.ubuntu.com
+d-i mirror/http/directory string /ubuntu/
+d-i mirror/http/proxy string
+
+#The Debian release to install
+
+d-i mirror/suite string bionic
+
+#user setup
+
+d-i passwd/user-fullname string Ubuntu 18.04 test user
+
+d-i passwd/username string test
+
+d-i passwd/user-password password qwerty
+
+d-i passwd/user-password-again password qwerty
+
+d-i user-setup/allow-password-weak boolean true
+
+d-i user-setup/encrypt-home boolean false
+
+d-i live-installer/enable boolean false
+
+#Partitioning
+
+d-i partman-auto/disk string /dev/sda
+
+d-i partman-auto/method string lvm
+
+d-i partman-lvm/device_remove_lvm boolean true
+
+d-i partman-lvm/confirm boolean true
+
+d-i partman-lvm/confirm_nooverwrite boolean true
+
+d-i partman-auto-lvm/guided_size string max
+
+d-i partman-auto/choose_recipe select atomic
+
+d-i partman-partitioning/confirm_write_new_label boolean true
+
+d-i partman/choose_partition select finish
+
+d-i partman/confirm boolean true
+
+d-i partman/confirm_nooverwrite boolean true
