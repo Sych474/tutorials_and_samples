@@ -3,4 +3,5 @@ Some tutorials and examples collected and created by me during the work, I will 
 
 ## Table of contents
 
-- [DockerNginxHTTPS](https://github.com/Sych474/tutorials_and_samples/tree/master/DockerNginxHTTPS) - Docker with Nginx + HTTPS + self-signed SSL 
+- [DockerNginxHTTPS](./DockerNginxHTTPS) - Docker with Nginx + HTTPS + self-signed SSL 
+- [UbuntuNetboot](./UbuntuNetboot) - Creating Ubuntu netboot server (how to install ubuntu by the network)
